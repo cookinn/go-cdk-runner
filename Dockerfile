@@ -9,7 +9,7 @@ RUN npm install -g aws-cdk && apt-get install awscli -y
 RUN apt-get install git -y && apt-get install bash -y
 
 # Install Go
-RUN apt-get install golang-go
+RUN apt-get install golang-go -y
 
 # Install Docker
 # See https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
