@@ -9,6 +9,7 @@ RUN npm install -g aws-cdk && apt-get install awscli -y
 RUN apt-get install git -y && apt-get install bash -y
 
 # Install Go
+# See https://github.com/golang/go/wiki/Ubuntu#using-ppa
 RUN add-apt-repository ppa:longsleep/golang-backports && apt update && apt install golang-go -y
 
 # Install Docker
