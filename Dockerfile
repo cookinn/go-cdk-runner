@@ -1,6 +1,6 @@
 FROM node:latest
 
-RUN apt update && update upgrade -y
+RUN apt update && apt upgrade -y
 
 # Install AWS CDK and CLI
 RUN npm install -g aws-cdk && apt-get install awscli -y
