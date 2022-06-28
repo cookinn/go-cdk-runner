@@ -5,12 +5,12 @@ RUN apt update && apt upgrade -y
 # Install AWS CDK and CLI
 RUN npm install -g aws-cdk && apt-get install awscli -y
 
-# Install Git and Bash
-RUN apt-get install git -y && apt-get install bash -y
+# Install Git, Bash and cURL
+RUN apt-get install git -y && apt-get install bash -y && apt-get install curl -y
 
 # Install Go
-# See https://github.com/golang/go/wiki/Ubuntu#using-ppa and https://itsfoss.com/add-apt-repository-command-not-found
-RUN apt-get install software-properties-common -y && add-apt-repository ppa:longsleep/golang-backports && apt update && apt install golang-go -y
+# See https://go.dev/doc/install
+RUN curl -sSLOi https://go.dev/dl/go1.17.11.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.17.11.linux-amd64.tar.gz && export PATH=$PATH:/usr/local/go/bin
 
 # Install Docker
 # See https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
