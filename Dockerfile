@@ -10,7 +10,7 @@ RUN apt-get install git -y && apt-get install bash -y && apt-get install curl -y
 
 # Install Go
 # See https://go.dev/doc/install
-RUN curl -sSLOi https://go.dev/dl/go1.17.11.linux-amd64.tar.gz && tar -C /usr/local -xf go1.17.11.linux-amd64.tar.gz && export PATH=$PATH:/usr/local/go/bin
+RUN curl -sSLOi https://go.dev/dl/go1.17.11.linux-amd64.tar.gz && tar -C /usr/local xvf go1.17.11.linux-amd64.tar.gz && export PATH=$PATH:/usr/local/go/bin
 
 # Install Docker
 # See https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
